@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакти – Математична логіка</title>
+<style>
+body { font-family:'Poppins', sans-serif; margin:0; padding:0; background:#f0f4f8; color:#333; }
+header { padding:20px 0; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,0.1); text-align:center; }
+header img { max-width:250px; height:auto; display:block; margin:0 auto 10px; }
+header h1 { font-size:24px; color:#4e54c8; margin:10px 0; }
+.main-container { display:flex; justify-content:space-between; align-items:flex-start; max-width:1200px; margin:20px auto; gap:20px; flex-wrap:nowrap; }
+.content-left { flex:1 1 70%; }
+.description { background:#fff; padding:20px; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.1); line-height:1.6; }
+.sidebar { flex:0 0 180px; display:flex; flex-direction:column; align-items:center; gap:15px; }
+.sidebar-banner { width:100%; max-width:120px; height:auto; border-radius:12px; box-shadow:0 5px 15px rgba(0,0,0,0.2); }
+.sidebar-buttons { display:flex; flex-direction:column; gap:10px; width:100%; }
+.sidebar-buttons a { text-decoration:none; display:inline-block; padding:10px 20px; border-radius:12px; background:linear-gradient(135deg,#ff758c,#ff7eb3); color:#fff; font-weight:600; font-size:14px; box-shadow:0 5px 10px rgba(0,0,0,0.2); text-align:center; transition: all 0.3s ease; }
+.sidebar-buttons a:hover { transform: translateY(-3px); box-shadow:0 8px 15px rgba(0,0,0,0.3); }
+@media (max-width:900px){
+    .main-container { flex-direction:column; align-items:center; flex-wrap:wrap; }
+    .sidebar { width:80%; flex:0 0 auto; }
+    .sidebar-buttons a { font-size:16px; padding:12px 25px; }
+}
+footer { text-align:center; padding:20px 0; background:#fff; box-shadow:0 -2px 10px rgba(0,0,0,0.1); margin-top:20px; }
+</style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Логотип курсу">
+    <h1>Математична логіка – Контакти</h1>
+</header>
+
+<div class="main-container">
+    <div class="content-left">
+        <div class="description">
+            <p>Тут ви можете знайти контактні дані викладача та способи зв’язку для консультацій та запитань:</p>
+            <ul>
+                <li>Email: teacher@example.com</li>
+                <li>Телефон: +380 00 000 0000</li>
+                <li>Адреса: вул. Прикладна, 1, Київ, Україна</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sidebar">
+      <img src="banner_small.png" class="sidebar-banner">
+        <div class="sidebar-buttons">
+            <a href="index.html">Головна</a>
+            <a href="homework.html">Домашні завдання</a>
+            <a href="library.html">Література</a>
+            <a href="contacts.html">Контакти</a>
+            <a href="../"> Список лабораторних</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2025 Освітній сайт. Всі права захищені.</p>
+</footer>
+
+</body>
+</html>

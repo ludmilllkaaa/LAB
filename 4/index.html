@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Освітній посібник</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<script src="theme.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Освітній посібник</h1>
+    <p>Навчальні матеріали з інформатики та програмування</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#tab1" class="tab-link active" data-tab="tab1">Вступ</a></li>
+        <li><a href="#tab2" class="tab-link" data-tab="tab2">Методи навчання</a></li>
+        <li><a href="#tab3" class="tab-link" data-tab="tab3">Оцінювання</a></li>
+        <li><a href="#tab4" class="tab-link" data-tab="tab4">Література</a></li>
+        <li><a href="../"> Список лабораторних</a></li>
+    </ul>
+</nav>
+
+<main class="flex-container">
+    <section class="main-content">
+        <div id="tab1" class="tab-content active">
+            <h2>Вступ</h2>
+            <p>Цей ресурс призначений для студентів і викладачів. Тут наведено навчальні матеріали з інформатики з використанням сучасного адаптивного макету.</p>
+        </div>
+        <div id="tab2" class="tab-content">
+            <h2>Методи навчання</h2>
+            <ul>
+                <li>Пояснювально-ілюстративний метод</li>
+                <li>Проблемне навчання</li>
+                <li>Практичні роботи та лабораторні</li>
+                <li>Проєктні технології</li>
+            </ul>
+        </div>
+        <div id="tab3" class="tab-content">
+            <h2>Оцінювання</h2>
+            <p>Використовується поточне, тематичне та формувальне оцінювання з прозорими критеріями.</p>
+        </div>
+        <div id="tab4" class="tab-content">
+            <h2>Література</h2>
+            <ol>
+                <li>Підручники з інформатики для шкіл</li>
+                <li>Методичні посібники для студентів педагогічних університетів</li>
+                <li>Онлайн-курси та статті з цифрової дидактики</li>
+            </ol>
+        </div>
+    </section>
+
+    <aside class="sidebar">
+        <h3>Навігація та тема</h3>
+        <div class="theme-toggle-wrapper">
+            <button type="button" id="theme-toggle">Світла тема</button>
+        </div>
+        <h3>Вкладки</h3>
+        <ul>
+            <li><a href="#tab1" class="tab-link active" data-tab="tab1">Вступ</a></li>
+            <li><a href="#tab2" class="tab-link" data-tab="tab2">Методи навчання</a></li>
+            <li><a href="#tab3" class="tab-link" data-tab="tab3">Оцінювання</a></li>
+            <li><a href="#tab4" class="tab-link" data-tab="tab4">Література</a></li>
+        </ul>
+    </aside>
+</main>
+
+<footer>
+    <p>&copy; 2025 Освітній посібник</p>
+</footer>
+
+<script>
+const tabs = document.querySelectorAll('.tab-link');
+const contents = document.querySelectorAll('.tab-content');
+
+function activateTab(tabId) {
+    tabs.forEach(tab => tab.classList.toggle('active', tab.dataset.tab === tabId));
+    contents.forEach(content => content.id === tabId ? content.classList.add('active') : content.classList.remove('active'));
+}
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', e => {
+        e.preventDefault();
+        activateTab(tab.dataset.tab);
+    });
+});
+</script>
+
+</body>
+</html>

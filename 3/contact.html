@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Контакти</h1>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="contact.html">Контакти</a>
+            <a href="../"> Список лабораторних</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h2>Форма зворотного зв'язку</h2>
+            <form>
+                <!-- Текстове поле ПІБ -->
+                <label for="name">ПІБ:</label>
+                <input type="text" id="name" name="name" placeholder="Ваше ім'я" required>
+
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                <!-- Багаторядкове поле тексту звернення -->
+                <label for="message">Текст звернення:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Ваше повідомлення" required></textarea>
+
+                <!-- Radio buttons для теми звернення -->
+                <fieldset>
+                    <legend>Тема звернення:</legend>
+                    <input type="radio" id="consultation" name="topic" value="Консультація" checked required>
+                    <label for="consultation">Консультація</label><br>
+
+                    <input type="radio" id="assignment" name="topic" value="Питання по завданню">
+                    <label for="assignment">Питання по завданню</label><br>
+
+                    <input type="radio" id="other" name="topic" value="Інше">
+                    <label for="other">Інше</label>
+                </fieldset>
+
+                <!-- Select для групи -->
+                <label for="group">Вибір курсу/групи:</label>
+                <select id="group" name="group" required>
+                    <option value="">-- Оберіть групу --</option>
+                    <option value="M1-B22">M1-B22</option>
+                    <option value="M1-B21">M1-B23</option>
+                    <option value="M2-B22">M2-B24</option>
+                    <option value="M2-B21">M2-B25</option>
+                </select>
+
+                <!-- Кнопка відправки -->
+                <button type="submit">Відправити</button>
+            </form>
+
+            <!-- Інші контакти -->
+            <h2>Інші контакти</h2>
+            <ul>
+                <li><strong>Адреса:</strong> вул. Симона Петлюри, 1, Кам'янець-Подільський, Україна</li>
+                <li><strong>Email:</strong> m1b22@kpnu.ua</li>
+                <li><strong>Телефон:</strong> +380 44 123 45 67</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
